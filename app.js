@@ -11,7 +11,10 @@ app.use(express.json());
 connect();
 
 // Routes
-app.use('/tasks', taskRoutes);
+
+app.use('/',require('./routes/index'));
+
+//app.use('/tasks', taskRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
